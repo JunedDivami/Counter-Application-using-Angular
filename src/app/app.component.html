@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="numDiv" [ngStyle]="{backgroundColor: getColor()}">
+        <span>{{count}}</span>
+    </div>
+    <app-child [inputFromParent] = "count" [minus] = "minus" [plus] = "plus" [rs] = "rs" (sendCount)="getCount($event)"></app-child>
+
+    <!-- <div class="btnDiv">
+        <button (click)="minfun()">-</button>
+        <button (click)="resetfun()">R</button>
+        <button (click)="plusfun()">+</button>
+    </div> -->
+
+    
+</body>
+</html>
